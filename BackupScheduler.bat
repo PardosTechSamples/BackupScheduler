@@ -2,7 +2,6 @@
 del C:\BackupScheduler\logs\sessionlog.txt
 set TODAY=%date:~10,4%-%date:~7,2%-%date:~4,2%
 set DriveA=C:\Loc\To\DriveA\
-set DriveB=E:\Loc\To\DriveB\
 set Days=7
 set ExternLoc1=\\Server1\Backups\DriveA\%TODAY%
 set ExternLoc2=\\Server2\Backups\DriveA\%TODAY%
