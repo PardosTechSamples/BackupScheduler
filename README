@@ -2,7 +2,7 @@ BackupScheduler 1.0
 
 
 
-This Batch Script is designed to automatically compress and backup 2 directories, known as DriveA and DriveB to 2 Servers.
+This Batch Script is designed to automatically compress and backup 1 to 2 Servers.
 Once complete, a log is saved to location C:\BackupScheduler\logs\ and a 7 day rotating backup is saved on the local Drive @ C:\BackupScheduler\BACKUPS\. Combined with Task Scheduler, this tool can prove useful for automating regular backups of drives on windows machines.
 
 This script requires 7zip File manager to compress its files.
