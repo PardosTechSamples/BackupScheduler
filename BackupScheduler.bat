@@ -6,7 +6,6 @@ set Days=7
 set ExternLoc1=\\Server1\Backups\DriveA\%TODAY%
 set ExternLoc2=\\Server2\Backups\DriveA\%TODAY%
 
-
 title BackupScheduler 1.0
 
 echo ------------------------------------------------------------------------------- >> C:\BackupScheduler\logs\sessionlog.txt
@@ -32,7 +31,12 @@ echo Copying DriveA to Server 1, Server 2: >> C:\BackupScheduler\logs\sessionlog
 robocopy "C:\BackupScheduler\BACKUPS\" %ExternLoc1% DriveA%TODAY%.zip /A-:SHR >> C:\BackupScheduler\logs\sessionlog.txt
 robocopy "C:\BackupScheduler\BACKUPS\" %ExternLoc2% DriveA%TODAY%.zip /A-:SHR >> C:\BackupScheduler\logs\sessionlog.txt
 
+IF %Days% NEQ 0 (
 echo Deleting Files Older than %Days% Days.  C:\BackupScheduler\BACKUPS\ >> C:\BackupScheduler\logs\sessionlog.txt
 ForFiles /p "C:\BackupScheduler\BACKUPS" /s /d -%Days% /c "cmd /c del /q @file" >> C:\BackupScheduler\logs\sessionlog.txt
+) ELSE (
+echo Not deleting any files as Days is set to 0. >> C:\BackupScheduler\logs\sessionlog.txt
+)
+
 echo 		Backing Up Log >> C:\BackupScheduler\logs\sessionlog.txt
 copy C:\BackupScheduler\logs\sessionlog.txt C:\BackupScheduler\logs\%TODAY%.txt >> C:\BackupScheduler\logs\sessionlog.txt
