@@ -9,7 +9,8 @@ This script requires 7zip File manager to compress its files.
 
 
 
-Note: in order to increase pritority of script in Task Scheduler.
+Note: 
 
-Setup the script to run at your desired schedule. Then, export to XML.
-Once you have exported your XML, change the <Priority> Level to 3 and reimport into Task Scheduler.
+In order to increase pritority of script in Task Scheduler:
+  Setup the script to run at your desired schedule. Then, export to XML.
+  Once you have exported your XML, change the <Priority> Level to 3 and reimport into Task Scheduler.
