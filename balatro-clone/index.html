@@ -20,11 +20,11 @@
       <div class="top-actions">
         <button type="button" class="btn ghost" id="btn-rules">Rulebook</button>
         <button type="button" class="btn ghost" id="btn-runinfo">Run Info</button>
+        <button type="button" class="btn ghost" id="btn-collection">Collection</button>
       </div>
     </header>
 
     <main id="stage"></main>
-
     <footer class="logbar" id="logbar"></footer>
   </div>
 
@@ -48,8 +48,21 @@
     </form>
   </dialog>
 
+  <dialog id="collection-modal" class="modal wide">
+    <form method="dialog" class="modal-card">
+      <header>
+        <h2>Card Collection</h2>
+        <button value="close" class="btn icon" aria-label="Close">×</button>
+      </header>
+      <div class="modal-body" id="collection-body"></div>
+    </form>
+  </dialog>
+
   <script src="js/data.js"></script>
   <script src="js/poker.js"></script>
+  <script src="js/jokers.js"></script>
+  <script src="js/modifiers.js"></script>
+  <script src="js/consumables.js"></script>
   <script src="js/game.js"></script>
   <script src="js/ui.js"></script>
 </body>
