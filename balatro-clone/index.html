@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ante Run — Balatro-style Poker Roguelike</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">♠</span>
+        <h1>Ante Run</h1>
+      </div>
+      <div class="top-stats" id="top-stats"></div>
+      <div class="top-actions">
+        <button type="button" class="btn ghost" id="btn-rules">Rulebook</button>
+        <button type="button" class="btn ghost" id="btn-runinfo">Run Info</button>
+        <button type="button" class="btn ghost" id="btn-collection">Collection</button>
+      </div>
+    </header>
+
+    <main id="stage"></main>
+    <footer class="logbar" id="logbar"></footer>
+  </div>
+
+  <dialog id="rules-modal" class="modal">
+    <form method="dialog" class="modal-card">
+      <header>
+        <h2>Rulebook</h2>
+        <button value="close" class="btn icon" aria-label="Close">×</button>
+      </header>
+      <div class="modal-body" id="rules-body"></div>
+    </form>
+  </dialog>
+
+  <dialog id="info-modal" class="modal">
+    <form method="dialog" class="modal-card">
+      <header>
+        <h2>Run Info</h2>
+        <button value="close" class="btn icon" aria-label="Close">×</button>
+      </header>
+      <div class="modal-body" id="info-body"></div>
+    </form>
+  </dialog>
+
+  <dialog id="collection-modal" class="modal wide">
+    <form method="dialog" class="modal-card">
+      <header>
+        <h2>Card Collection</h2>
+        <button value="close" class="btn icon" aria-label="Close">×</button>
+      </header>
+      <div class="modal-body" id="collection-body"></div>
+    </form>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/poker.js"></script>
+  <script src="js/jokers.js"></script>
+  <script src="js/modifiers.js"></script>
+  <script src="js/consumables.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
